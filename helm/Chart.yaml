@@ -1,6 +1,6 @@
 apiVersion: v2
-name: pipeline7helm
-description: A Helm chart for the Pipeline7 DevOps project
+name: pipeline8Trivy
+description: A Helm chart for the Pipeline8 with trivy DevOps project
 type: application
 
 # This is the chart version (internal to Helm)

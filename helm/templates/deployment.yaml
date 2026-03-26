@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pipeline7-app
+  name: pipeline8-app
   namespace: bank-production
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: pipeline7-app
+      app: pipeline8-app
   template:
     metadata:
       labels:
-        app: pipeline7-app
+        app: pipeline8-app
     spec:
       initContainers:
       - name: copy-html
-        image: sshivaji555/pipeline7helm-app:latest
+        image: sshivaji555/pipeline8Trivy-app:latest
         imagePullPolicy: Always
         command:
           - sh
@@ -27,7 +27,7 @@ spec:
 
       containers:
       - name: nginx
-        image: sshivaji555/pipeline7helm-app:latest
+        image: sshivaji555/pipeline8Trivy-app:latest
         imagePullPolicy: Always
         ports:
           - containerPort: 80
