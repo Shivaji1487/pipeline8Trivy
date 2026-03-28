@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: pipeline8Trivy-service
+  name: pipeline8-trivy-service # All lowercase
   namespace: bank-production-v8
 spec:
   type: ClusterIP
   selector:
-    app: pipeline8-app  # <--- MUST MATCH deployment.yaml
+    app: pipeline8-app # Must match Deployment metadata.labels.app
   ports:
     - port: 80
       targetPort: 80
