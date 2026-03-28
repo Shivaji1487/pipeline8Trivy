@@ -6,7 +6,7 @@ metadata:
 spec:
   type: ClusterIP
   selector:
-    app: pipeline8-app # Must match Deployment metadata.labels.app
+    app: pipeline8-trivy # Must match Deployment metadata.labels.app
   ports:
     - port: 80
       targetPort: 80
